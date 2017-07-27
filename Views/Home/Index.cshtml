@@ -1,0 +1,339 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Anthem Claims Employee Management</title>
+    <script src="~/js/jquery-1.7.2.min.js"></script>
+    <script src="~/js/Script.js"></script>
+    @*<link href="~/css/Styles.css" rel="stylesheet" />*@
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td width="50%"><div id="title"><img src="~/images/Logo.png" width="200" />&nbsp;CHIPS CLAIMS EMPLOYEE MANAGER</div></td>
+            <td width="40%">
+                <div id="Actions">
+                    <strong>Search</strong> <input type="text" id="txtSearch" class="txt" onkeyup="Search()" placeholder="Type in a name .." />
+                    <button id="btnNew" class="btn">
+                        <img src="~/images/AddNew.png" width="15" height="15" border="0" />
+                        <span>Add New Employee</span>
+                    </button>
+                    <select id="drpStatus" class="txt" onchange="LoadEmployeeData()">
+                        <option>Active</option>
+                        <option>InActive</option>
+                        <option>All</option>
+                    </select>
+                </div>
+            </td>
+
+            <td width="10%" align="right">
+                <div id="Signout">
+                    <img src="~/images/People.png" class="imgcursor" title="Employee Records" id="People" onclick="ShowReportTab(this)" />
+                    &nbsp;<img src="~/images/Report.png" class="imgcursor" title="Reports" id="Report" onclick="ShowReportTab(this)" />
+                    &nbsp;<img src="~/images/SignOut.png" id="btnSignout" class="imgcursor" onclick="Signout()" title="Sign Out" />
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <div id="Records">
+        <table id="tbDetails" cellpadding="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th width="4%"></th>
+                    <th width="5%">Emp ID</th>
+                    <th width="16%">Name</th>
+                    <th width="5%">Outlook</th>
+                    <th width="15%">Offshore Manager</th>
+                    <th width="15%">Onshore Manager</th>
+                    <th width="7%">Billable</th>
+                    <th width="8%">Resource Type</th>
+                    <th width="7%">Location</th>
+                    <th width="6%">IBM Type</th>
+                    <th width="4%">Budget</th>
+                    <th width="7%">Project Area</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="SelectPeriod">
+        <fieldset style="border-width:1px;border-color:#808080">
+            <legend><b>Select a Period</b></legend>
+            Year
+            <select id="drpYearSelect" class="period"><option>2017</option><option>2018</option></select>
+            &nbsp;Month
+            <select id="drpMonthFrom" class="period"><option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option><option>May</option><option>Jun</option><option>Jul</option><option>Aug</option><option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option></select>
+            To
+            <select id="drpMonthTo" class="period"><option>Jan</option><option>Feb</option><option>Mar</option><option>Apr</option><option>May</option><option>Jun</option><option>Jul</option><option>Aug</option><option>Sep</option><option>Oct</option><option>Nov</option><option>Dec</option></select>
+            <button id="btnShowReport" class="btn">
+                <span>Show Report</span>
+            </button>
+        </fieldset>
+    </div>
+
+    <div id="ReportTab">
+        <ul class="tabs">
+            <li class="tab-link current" data-tab="tab-1">Global Report - Sum of Cost & Hours</li>
+            <li class="tab-link" data-tab="tab-2">Onshore/Offshore Report - Sum of Cost & Hours</li>
+            <li class="tab-link" data-tab="tab-3">Employee Report</li>
+        </ul>
+        <div id="tab-1" class="tab-content current">
+            <a class="btnPrint" id="btnPivot1">
+                <img src="~/images/Print.png" width="18" height="18" border="0" />
+                <span>Export To Excel</span>
+            </a>
+            <table id="tbPivot1" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="tab-2" class="tab-content">
+            <a class="btnPrint" id="btnPivot2">
+                <img src="~/images/Print.png" width="18" height="18" border="0" />
+                <span>Export To Excel</span>
+            </a>
+            <table id="tbPivot2" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="tab-3" class="tab-content">
+            <a class="btnPrint" id="btnPivot3">
+                <img src="~/images/Print.png" width="18" height="18" border="0" />
+                <span>Export To Excel</span>
+            </a>
+
+            <table id="tbPivot3" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr></tr>
+                    <tr></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div id="AddEditEmployee" class="ontop">
+        <table id="tbEmployee" style="background-color:#f2f2f2">
+            <tr>
+                <td width="15%">Emp ID</td>
+                <td width="30%"><input type="text" id="txtEmpID" value="" class="drp" /></td>
+                <td rowspan="11" width="55%" valign="top" align="right">
+                    <select id="drpYear" class="year"><option>2017</option><option>2018</option></select>
+
+                    <table id="tbBilling" cellpadding="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <td width="18%">Month</td>
+                                <td width="27%">Band</td>
+                                <td width="18%">Rate</td>
+                                <td width="18%">Hours</td>
+                                <td width="20%">Cost</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Jan</td>
+                                <td><select id="drpBand1" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate1"></td>
+                                <td><input type="text" id="txtHours1" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost1"></td>
+                            </tr>
+                            <tr>
+                                <td>Feb</td>
+                                <td><select id="drpBand2" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate2"></td>
+                                <td><input type="text" id="txtHours2" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost2"></td>
+                            </tr>
+                            <tr>
+                                <td>Mar</td>
+                                <td><select id="drpBand3" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate3"></td>
+                                <td><input type="text" id="txtHours3" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost3"></td>
+                            </tr>
+                            <tr>
+                                <td>Apr</td>
+                                <td><select id="drpBand4" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate4"></td>
+                                <td><input type="text" id="txtHours4" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost4"></td>
+                            </tr>
+                            <tr>
+                                <td>May</td>
+                                <td><select id="drpBand5" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate5"></td>
+                                <td><input type="text" id="txtHours5" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost5"></td>
+                            </tr>
+                            <tr>
+                                <td>Jun</td>
+                                <td><select id="drpBand6" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate6"></td>
+                                <td><input type="text" id="txtHours6" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost6"></td>
+                            </tr>
+                            <tr>
+                                <td>Jul</td>
+                                <td><select id="drpBand7" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate7"></td>
+                                <td><input type="text" id="txtHours7" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost7"></td>
+                            </tr>
+                            <tr>
+                                <td>Aug</td>
+                                <td><select id="drpBand8" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate8"></td>
+                                <td><input type="text" id="txtHours8" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost8"></td>
+                            </tr>
+                            <tr>
+                                <td>Sep</td>
+                                <td><select id="drpBand9" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate9"></td>
+                                <td><input type="text" id="txtHours9" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost9"></td>
+                            </tr>
+                            <tr>
+                                <td>Oct</td>
+                                <td><select id="drpBand10" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate10"></td>
+                                <td><input type="text" id="txtHours10" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost10"></td>
+                            </tr>
+                            <tr>
+                                <td>Nov</td>
+                                <td><select id="drpBand11" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate11"></td>
+                                <td><input type="text" id="txtHours11" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost11"></td>
+                            </tr>
+                            <tr>
+                                <td>Dec</td>
+                                <td><select id="drpBand12" class="txt" onchange="GetBandData(this)"><option>Select Band</option></select></td>
+                                <td id="rate12"></td>
+                                <td><input type="text" id="txtHours12" class="txt" onchange="SetCost(this)" /></td>
+                                <td id="cost12"></td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" id="txtName" class="txt" /></td>
+            </tr>
+            <tr>
+                <td>Outlook Category</td>
+                <td>
+                    <select id="drpOutlook" class="drp"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Offshore Manager</td>
+                <td><select id="drpOffshoreMngr" class="txt"></select></td>
+            </tr>
+            <tr>
+                <td>Onshore Manager</td>
+                <td><select id="drpOnshoreMngr" class="txt"></select></td>
+            </tr>
+            <tr>
+                <td>Billable</td>
+                <td><select id="drpBillable" class="drp"></select></td>
+            </tr>
+            <tr>
+                <td>Resource Type</td>
+                <td><select id="drpResourceType" class="drp"></select></td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td><select id="drpLocation" class="drp"></select></td>
+            </tr>
+            <tr>
+                <td>IBM Type</td>
+                <td><select id="drpIBMType" class="drp"></select></td>
+            </tr>
+            <tr>
+                <td>Project Area</td>
+                <td><select id="drpProject" class="drp"></select></td>
+            </tr>
+            <tr>
+                <td>Budget Area</td>
+                <td><select id="drpBudget" class="drp"></select></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    <button id="btnAdd" class="btn">
+                        <img src="~/images/Save.png" width="20" height="20" border="0" />
+                        <span>Save</span>
+                    </button>
+
+                    <button id="btnUpdate" class="btn">
+                        <img src="~/images/Update.png" width="20" height="20" border="0" />
+                        <span>Update</span>
+                    </button>
+
+                    <button id="btnClose" class="btn">
+                        <img src="~/images/Cancel.png" width="18" height="18" border="0" />
+                        <span>Close</span>
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="Login">
+        <table id="tbLogin" cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2">LOGIN TO CLAIMS EMPLOYEE MANAGER</th>
+            </tr>
+            <tr>
+                <td width="30%">Select Your Name</td>
+                <td width="70%"><select id="drpManagerName" class="txt"></select></td>
+            </tr>
+            <tr>
+                <td id="passLabel">Password</td>
+                <td><input type="password" id="txtPass" class="txt" onkeypress="return AddKeyPress(event);" /></td>
+            </tr>
+
+            <tr id="pass1">
+                <td>New Password</td>
+                <td><input type="password" id="txtPassChange" class="txt" /></td>
+            </tr>
+            <tr id="pass2">
+                <td>Retype Password</td>
+                <td><input type="password" id="txtPassRetype" class="txt" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right" style="padding-right:10px">
+                    <button id="btnChangePass" class="btnPrint">
+                        <img src="~/images/Login.png" width="18" height="18" border="0" />
+                        <span id="btnLabel">Change Password</span>
+                    </button>
+                    <button id="btnCancel" class="btnPrint">
+                        <img src="~/images/Login.png" width="18" height="18" border="0" />
+                        <span>Cancel</span>
+                    </button>
+                    <button id="btnLogin" class="btn">
+                        <img src="~/images/Login.png" width="18" height="18" border="0" />
+                        <span>Login</span>
+                    </button>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="Busy"><img src="~/images/ajax-loader.gif" /><br />Saving Employee Data</div>
+</body>
+</html>

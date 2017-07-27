@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Master>
+  <OutlookCategory>
+    <Category>RMCM</Category>
+    <Category>POR/SSCR</Category>
+    <Category>LO</Category>
+  </OutlookCategory>
+  <Billable>
+    <Type>YES</Type>
+    <Type>NO</Type>
+  </Billable>
+  <ResourceType>
+    <Type>Landed</Type>
+    <Type>Global</Type>
+    <Type>Subcontractor</Type>
+    <Type>US Regular</Type>
+  </ResourceType>
+  <LocationType>
+    <Type>Offshore</Type>
+    <Type>Onshore</Type>
+  </LocationType>
+  <IBMType>
+    <Type>IBM IN</Type>
+    <Type>IBM US</Type>
+    <Type>IBM PH</Type>
+  </IBMType>
+  <BudgetArea>
+    <Type>P1</Type>
+    <Type>P2</Type>
+    <Type>P3</Type>
+    <Type>P4</Type>
+    <Type>P5</Type>
+  </BudgetArea>
+  <ProjectArea>
+    <Project>ACES</Project>
+    <Project>CHIPS</Project>
+    <Project>AMISYS</Project>
+    <Project>Delivery</Project>
+  </ProjectArea>
+  <EmployeeBand>
+    <Band>Contractor</Band>
+    <Band>Band 3</Band>
+    <Band>Band 4</Band>
+    <Band>Band 5</Band>
+    <Band>Band 6</Band>
+    <Band>Band 6G</Band>
+    <Band>Band 6A</Band>
+    <Band>Band 6B</Band>
+    <Band>Band 7</Band>
+    <Band>Band 7A</Band>
+    <Band>Band 7B</Band>
+    <Band>Band 8</Band>
+    <Band>Band 9</Band>
+    <Band>Band 10</Band>
+  </EmployeeBand>
+</Master>

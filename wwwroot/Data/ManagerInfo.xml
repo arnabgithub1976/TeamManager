@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Managers>
+  <OnshoreManager>
+    <Manager Name="Santhi K Gogeneni">santhi</Manager>
+    <Manager Name="Satishkumar Krishnan">satish</Manager>
+    <Manager Name="Albert Arulswamy">albert</Manager>
+    <Manager Name="Marikkannan Gomathinayagam">mari</Manager>
+    <Manager Name="Sumesh Surendran">sumesh</Manager>
+  </OnshoreManager>
+  <OffshoreManager>
+    <Manager Name="Hemadri Lekkala">hema</Manager>
+    <Manager Name="Shanthikala Balachander">bala</Manager>
+    <Manager Name="Janakiraman Ramasubramanian">jana</Manager>
+    <Manager Name="Deepak D Sunke">deepak</Manager>
+    <Manager Name="Alexander Del Corro">alex</Manager>
+    <Manager Name="Sriharsha P S">harsha</Manager>
+    <Manager Name="Ravikiran K Raghunathan">ravi</Manager>
+  </OffshoreManager>
+  <Admin>
+    <Manager Name="ADMINISTRATOR">secure</Manager>
+  </Admin>
+</Managers>

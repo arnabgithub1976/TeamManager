@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EmployeeBand>
+  <Location Name="IBM US">
+      <Band ID="Contractor">80.00</Band>
+      <Band ID="Band 3">41.25</Band>
+      <Band ID="Band 4">48.66</Band>
+      <Band ID="Band 5">58.26</Band>
+      <Band ID="Band 6">70.87</Band>
+      <Band ID="Band 7">83.00</Band>
+      <Band ID="Band 8">98.72</Band>
+      <Band ID="Band 9">111.57</Band>
+      <Band ID="Band 10">133.44</Band>
+  </Location>
+  <Location Name="IBM IN Onshore">
+    <Band ID="Band 6A">49.98</Band>
+    <Band ID="Band 6B">52.64</Band>
+    <Band ID="Band 7A">57.34</Band>
+    <Band ID="Band 7B">61.38</Band>
+    <Band ID="Band 8">71.59</Band>
+    <Band ID="Band 9">84.20</Band>
+    <Band ID="Band 10">92.58</Band>
+  </Location>
+  <Location Name="IBM IN Offshore">
+    <Band ID="Contractor">20.36</Band>
+    <Band ID="Band 5">12.11</Band>
+    <Band ID="Band 6G">12.14</Band>
+    <Band ID="Band 6A">14.95</Band>
+    <Band ID="Band 6B">18.30</Band>
+    <Band ID="Band 7A">23.36</Band>
+    <Band ID="Band 7B">29.75</Band>
+    <Band ID="Band 8">41.09</Band>
+    <Band ID="Band 9">68.73</Band>
+    <Band ID="Band 10">93.63</Band>
+  </Location>
+  <Location Name="IBM PH">
+    <Band ID="Contractor">17.41</Band>
+    <Band ID="Band 5">12.11</Band>
+    <Band ID="Band 6G">12.58</Band>
+    <Band ID="Band 6A">15.42</Band>
+    <Band ID="Band 6B">18.74</Band>
+    <Band ID="Band 7A">23.91</Band>
+    <Band ID="Band 7B">30.08</Band>
+    <Band ID="Band 8">40.85</Band>
+    <Band ID="Band 9">58.60</Band>
+    <Band ID="Band 10">88.84</Band>
+  </Location>
+</EmployeeBand>

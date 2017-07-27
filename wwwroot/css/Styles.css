@@ -1,0 +1,272 @@
+body {
+    font-family: Calibri;
+    font-size  : 10pt;
+}
+#tbDetails,#tbEmployee,#tbBilling {
+    border-collapse: collapse;
+    width: 100%;
+}
+#tbPivot1,#tbPivot2,#tbPivot3  {
+    border-collapse: collapse;
+}
+#tbBilling {
+    margin-top: 15px;
+}
+#tbPivot1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#tbDetails td, #tbDetails th, #tbBilling td, #tbBilling th, #tbPivot1 td, #tbPivot1 th, #tbPivot2 td, #tbPivot2 th, #tbPivot3 td, #tbPivot3 th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+#tbDetails tr:nth-child(even){background-color: #f2f2f2;}
+
+#tbDetails thead, #tbBilling thead, #tbPivot1 thead, #tbPivot2 thead, #tbPivot3 thead {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2F4F4F;
+    color: white;
+    font-weight:bold;
+}
+#EmpDetails{
+    z-index: 9999;
+}
+.ontop {
+    /*
+	z-index: 999;
+    opacity: .7;
+	filter: alpha(opacity = 50);*/
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	position: absolute;				
+	color: #aaaaaa;
+}
+#tbEmployee {
+    width: 800px;
+	height: 400px;
+	position: absolute;
+	color: #000000;
+	/* To align popup window at the center of screen*/
+	top: 50%;
+	left: 50%;
+	margin-top: -220px;
+	margin-left: -400px;
+    border:5px solid #000;
+    border-collapse: collapse;
+}
+#tbEmployee td, #tbDetails th {
+    border:1px solid #aaaaaa;
+    padding: 4px;
+}
+.btn {
+    font-family: Calibri;
+    font-size  : 10pt;
+    background-color: #0094ff;
+    border: none;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 3px;
+}
+.btn img {  
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.btnPrint {
+    font-family: Calibri;
+    font-size  : 10pt;
+    font-weight: bold;
+    background-color: #fff;
+    border: solid 1px #2F4F4F;
+    color: #000;
+    padding: 4px 5px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 3px 3px;
+	cursor: pointer;
+}
+.btnPrint img {  
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.txt{
+    border:1px solid #808080;
+    font-family: Calibri;
+    font-size  : 10pt;
+    width:95%;
+}
+.year{
+    border:1px solid #808080;
+    font-family: Calibri;
+    font-size  : 10pt;
+    width:18%;
+}
+.drp{
+    border:1px solid #808080;
+    font-family: Calibri;
+    font-size  : 10pt;
+    width:45%;
+}
+#wrapper {
+  margin-left: 200px;
+}
+#Actions {
+  float: right;
+  width: 540px;
+  background-color: #CCF;
+  padding-left:10px;
+  margin-right:20px;
+}
+#title {
+  float: left;
+  width: 620px;
+  font-size: 25px;
+  color:#f47742;
+  font-weight:bold;
+  margin-top: -5px;
+}
+#cleared {
+  clear: both;
+}
+#txtSearch{
+    border:1px solid #808080;
+    font-family: Calibri;
+    font-size  : 10pt;
+    width:45%;
+    height:22px;
+}
+#drpStatus{
+    border:1px solid #808080;
+    font-family: Calibri;
+    font-size  : 10pt;
+    width:15%;
+    height:25px;
+}
+#tbLogin {
+    width: 400px;
+	height: 200px;
+	position: absolute;
+	color: #000000;
+	/* To align popup window at the center of screen*/
+	top: 50%;
+	left: 50%;
+	margin-top: -120px;
+	margin-left: -200px;
+    border:2px solid #000;
+}
+#tbLogin td, #tbLogin th {
+    border: 1px solid #ddd;
+    padding: 6px;
+}
+#tbLogin th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #2F4F4F;
+    color: white;
+    font-weight:bold;
+    font-size:15px;
+}
+.imgcursor{
+    cursor: pointer;
+    height:25px;
+    width:30px;
+    border:0px;
+}
+
+/* TABS */
+#ReportTab{
+	width: 100%;
+	margin-left: 0px;
+}
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+    
+}
+ul.tabs li{
+	background: none;
+	color: #222;
+	display: inline-block;
+	padding: 4px 10px;
+	cursor: pointer;
+    border-radius: 4px 4px 0px 0px;
+    border: solid 1px #808080;
+    border-bottom: none;
+}
+ul.tabs li.current{
+	background: #CCF;
+	color: #000;
+    font-weight:bold;
+    font-size:10pt;
+    border: 0px;
+    padding: 5px;
+}
+.tab-content{
+	display: none;
+	background: #fff;
+	padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+.tab-content.current{
+	display: inherit;
+}
+.period{
+    border:1px solid #808080;
+    font-family: Calibri;
+    font-size  : 10pt;
+    width:80px;
+    height:25px;
+}
+
+/* Tabs */
+#SelectPeriod {
+    width: 460px;
+	position: absolute;
+	top: 10%;
+	left: 80%;
+	margin-top: -10px;
+	margin-left: -210px;
+}
+.print {
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#Busy{
+    padding: 3px 3px 3px 3px;
+    border:1px solid #aaaaaa;
+    text-align:center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #2F4F4F;
+    width: 140px;
+    top: 50%;
+	left: 50%;
+	margin-top: -10px;
+	margin-left: -80px;
+	position: absolute;		
+    background-color:#ffffff;
+}
+.boxed {
+	display:inline-block;
+ 	border: 1px solid #000;
+	padding-left: 3px;
+	padding-right: 3px;
+	
+}

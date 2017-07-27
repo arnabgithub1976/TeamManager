@@ -1,0 +1,451 @@
+<Employees>
+<Employee>
+  <EmpID>030200</EmpID>
+  <Name>Arnab Chaudhuri</Name>
+  <OutlookCategory>LO</OutlookCategory>
+  <Status>Active</Status>
+  <OffshoreManager>Ravikiran K Raghunathan</OffshoreManager>
+  <OnshoreManager>Sumesh Surendran</OnshoreManager>
+  <Billable>YES</Billable>
+  <ResourceType>Global</ResourceType>
+  <Location>Offshore</Location>
+  <IBMType>IBM PH</IBMType>
+  <BudgetArea>P1</BudgetArea>
+  <ProjectArea>CHIPS</ProjectArea>
+  <Billing>
+    <Year Val="2017">
+      <Month Val="Jan">
+        <Band>Band 6B</Band>
+        <Rate>52.64</Rate>
+        <Hours>20</Hours>
+        <Cost>1052.8</Cost>
+      </Month>
+      <Month Val="Feb">
+        <Band>Band 7A</Band>
+        <Rate>57.34</Rate>
+        <Hours>200</Hours>
+        <Cost>11468</Cost>
+      </Month>
+      <Month Val="Mar">
+        <Band>Band 7A</Band>
+        <Rate>57.34</Rate>
+        <Hours>300</Hours>
+        <Cost>17202</Cost>
+      </Month>
+      <Month Val="Apr">
+        <Band>Band 7A</Band>
+        <Rate>23.91</Rate>
+        <Hours>230</Hours>
+        <Cost>5499.30</Cost>
+      </Month>
+      <Month Val="May">
+        <Band>Band 6B</Band>
+        <Rate>18.74</Rate>
+        <Hours>450</Hours>
+        <Cost>8433.00</Cost>
+      </Month>
+      <Month Val="Jun">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Jul">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Aug">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Sep">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Oct">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Nov">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Dec">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+    </Year>
+  </Billing>
+</Employee>
+<Employee>
+    <EmpID>050202</EmpID>
+    <Name>Neethu Mathew</Name>
+    <OutlookCategory>POR/SSCR</OutlookCategory>
+    <Status>Active</Status>
+    <OffshoreManager>Deepak D Sunke</OffshoreManager>
+    <OnshoreManager>Sumesh Surendran</OnshoreManager>
+    <Billable>YES</Billable>
+    <ResourceType>Global</ResourceType>
+    <Location>Offshore</Location>
+    <IBMType>IBM IN</IBMType>
+    <BudgetArea>P1</BudgetArea>
+    <ProjectArea>ACES</ProjectArea>
+    <Billing>
+      <Year Val="2017">
+        <Month Val="Jan">
+          <Band>Band 6B</Band>
+          <Rate>18.30</Rate>
+          <Hours>200</Hours>
+          <Cost>3660.00</Cost>
+        </Month>
+        <Month Val="Feb">
+          <Band>Band 7A</Band>
+          <Rate>23.36</Rate>
+          <Hours>180</Hours>
+          <Cost>4204.80</Cost>
+        </Month>
+        <Month Val="Mar">
+          <Band>Band 7A</Band>
+          <Rate>23.36</Rate>
+          <Hours>180</Hours>
+          <Cost>4204.80</Cost>
+        </Month>
+        <Month Val="Apr">
+          <Band>Band 7A</Band>
+          <Rate>23.36</Rate>
+          <Hours>180</Hours>
+          <Cost>4204.80</Cost>
+        </Month>
+        <Month Val="May">
+          <Band>Band 7B</Band>
+          <Rate>29.75</Rate>
+          <Hours>290</Hours>
+          <Cost>8627.50</Cost>
+        </Month>
+        <Month Val="Jun">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Jul">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Aug">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Sep">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Oct">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Nov">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Dec">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+      </Year>
+    </Billing>
+  </Employee>
+<Employee>
+    <EmpID>056202</EmpID>
+    <Name>Vipul Prakash</Name>
+    <OutlookCategory>POR/SSCR</OutlookCategory>
+    <Status>Active</Status>
+    <OffshoreManager>Ravikiran K Raghunathan</OffshoreManager>
+    <OnshoreManager>Sumesh Surendran</OnshoreManager>
+    <Billable>YES</Billable>
+    <ResourceType>Global</ResourceType>
+    <Location>Onshore</Location>
+    <IBMType>IBM IN</IBMType>
+    <BudgetArea>P1</BudgetArea>
+    <ProjectArea>ACES</ProjectArea>
+    <Billing>
+      <Year Val="2017">
+        <Month Val="Jan">
+          <Band>Band 6B</Band>
+          <Rate>18.30</Rate>
+          <Hours>100</Hours>
+          <Cost>1830.00</Cost>
+        </Month>
+        <Month Val="Feb">
+          <Band>Band 6B</Band>
+          <Rate>18.30</Rate>
+          <Hours>200</Hours>
+          <Cost>3660.00</Cost>
+        </Month>
+        <Month Val="Mar">
+          <Band>Band 7A</Band>
+          <Rate>57.34</Rate>
+          <Hours>250</Hours>
+          <Cost>14335.00</Cost>
+        </Month>
+        <Month Val="Apr">
+            <Band>Band 7A</Band>
+            <Rate>57.34</Rate>
+            <Hours>200</Hours>
+            <Cost>11468.00</Cost>
+        </Month>
+        <Month Val="May">
+            <Band />
+            <Rate />
+            <Hours />
+            <Cost />
+        </Month>
+        <Month Val="Jun">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Jul">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Aug">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Sep">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Oct">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Nov">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Dec">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+      </Year>
+    </Billing>
+  </Employee>
+<Employee>
+  <EmpID>890768</EmpID>
+  <Name>Alamelu Muralidharan</Name>
+  <OutlookCategory>RMCM</OutlookCategory>
+  <Status>Active</Status>
+  <OffshoreManager>Sriharsha P S</OffshoreManager>
+  <OnshoreManager>Marikkannan Gomathinayagam</OnshoreManager>
+  <Billable>YES</Billable>
+  <ResourceType>Subcontractor</ResourceType>
+  <Location>Onshore</Location>
+  <IBMType>IBM IN</IBMType>
+  <BudgetArea>P2</BudgetArea>
+  <ProjectArea>ACES</ProjectArea>
+  <Billing>
+    <Year Val="2017">
+      <Month Val="Jan">
+        <Band>Band 7B</Band>
+        <Rate>61.38</Rate>
+        <Hours>200</Hours>
+        <Cost>12276</Cost>
+      </Month>
+      <Month Val="Feb">
+        <Band>Band 7B</Band>
+        <Rate>61.38</Rate>
+        <Hours>340</Hours>
+        <Cost>20869.20</Cost>
+      </Month>
+      <Month Val="Mar">
+        <Band>Band 7B</Band>
+        <Rate>61.38</Rate>
+        <Hours>400</Hours>
+        <Cost>24552.00</Cost>
+      </Month>
+      <Month Val="Apr">
+        <Band>Band 7B</Band>
+        <Rate>61.38</Rate>
+        <Hours>345</Hours>
+        <Cost>21176.10</Cost>
+      </Month>
+      <Month Val="May">
+        <Band>Band 7B</Band>
+        <Rate>61.38</Rate>
+        <Hours>450</Hours>
+        <Cost>27621.00</Cost>
+      </Month>
+      <Month Val="Jun">
+        <Band>Band 7B</Band>
+        <Rate>61.38</Rate>
+        <Hours>340</Hours>
+        <Cost>17897.60</Cost>
+      </Month>
+      <Month Val="Jul">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Aug">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Sep">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Oct">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Nov">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+      <Month Val="Dec">
+        <Band />
+        <Rate />
+        <Hours />
+        <Cost />
+      </Month>
+    </Year>
+  </Billing>
+</Employee>
+<Employee>
+	<EmpID>900100</EmpID>
+	<Name>Kiran Patil</Name>
+	<OutlookCategory>POR/SSCR</OutlookCategory>
+	<Status>InActive</Status>
+	<OffshoreManager>Ravikiran K Raghunathan</OffshoreManager>
+	<OnshoreManager>Sumesh Surendran</OnshoreManager>
+	<Billable>YES</Billable>
+	<ResourceType>Global</ResourceType>
+	<Location>Onshore</Location>
+	<IBMType>IBM IN</IBMType>
+	<BudgetArea>P1</BudgetArea>
+	<ProjectArea>ACES</ProjectArea>
+	<Billing><Year Val="2017">
+		<Month Val="Jan">
+			<Band>Band 7A</Band>
+			<Rate>57.34</Rate>
+			<Hours>240</Hours>
+			<Cost>13761.60</Cost>
+		</Month>
+		<Month Val="Feb">
+			<Band>Band 7B</Band>
+	        <Rate>61.38</Rate>
+	        <Hours>400</Hours>
+	        <Cost>24552.00</Cost>
+		</Month>
+		<Month Val="Mar">
+			<Band />
+	        <Rate />
+	        <Hours />
+	        <Cost />
+		</Month>
+		<Month Val="Apr">
+            <Band />
+            <Rate />
+            <Hours />
+            <Cost />
+        </Month>
+        <Month Val="May">
+            <Band />
+            <Rate />
+            <Hours />
+            <Cost />
+        </Month>
+        <Month Val="Jun">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Jul">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Aug">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Sep">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Oct">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Nov">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+        <Month Val="Dec">
+          <Band />
+          <Rate />
+          <Hours />
+          <Cost />
+        </Month>
+	</Year>
+</Billing>
+</Employee>
+</Employees>
